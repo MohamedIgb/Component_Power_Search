@@ -158,6 +158,7 @@ def app():
             cancel_pressed = True
         for i in range(5, 0, -1):
             if cancel_pressed:
+                st.experimental_rerun()
                 break
             timer_message = st.info(f"{max_power_keys[0]} from {reg} will automatically be confirmed within {i}...")
             time.sleep(1)
